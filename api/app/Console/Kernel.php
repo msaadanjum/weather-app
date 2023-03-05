@@ -21,7 +21,7 @@ class Kernel extends ConsoleKernel
         // Scheduler to call the Service to fetch all users' weather
         $schedule->call(function(){
             WeatherService::findWeatherOfAllUsers();
-        })->everyMinute();
+        })->hourly();
 
     }
 
